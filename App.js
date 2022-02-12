@@ -65,12 +65,11 @@ export default function App() {
         style={{ flex: 1 }}
         enabled={Platform.OS === "ios"}
       >
-        <StatusBar style="auto" />
         <View style={styles.container}>
           <View style={styles.Hero}>
             <Text style={styles.Title}>Lembretes do dia</Text>
 
-            <SimpleLineIcons name="note" size={24} color="black" />
+            <SimpleLineIcons name="note" size={24} color="white" />
           </View>
           <View style={styles.Body}>
             <FlatList
@@ -85,7 +84,7 @@ export default function App() {
                     <MaterialCommunityIcons
                       name="delete-forever"
                       size={24}
-                      color="red"
+                      color="#f0002f"
                     />
                   </TouchableOpacity>
                 </View>
@@ -103,7 +102,7 @@ export default function App() {
               value={newTask}
             />
             <TouchableOpacity style={styles.Button} onPress={() => addTask()}>
-              <Ionicons name="add-sharp" size={24} color="black" />
+              <Ionicons name="add-sharp" size={24} color="white" />
             </TouchableOpacity>
           </View>
         </View>
@@ -115,10 +114,9 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff",
+    backgroundColor: "#1E1E1E",
     paddingHorizontal: 20,
     paddingVertical: 20,
-    marginTop: 20,
   },
   Body: {
     flex: 1,
@@ -127,10 +125,11 @@ const styles = StyleSheet.create({
     display: "flex",
     flexDirection: "row",
     alignItems: "center",
-    marginTop: 10,
+    marginTop: 30,
     justifyContent: "center",
   },
   Title: {
+    color: "#FFFF",
     fontWeight: "bold",
     fontSize: 18,
     paddingRight: 10,
@@ -143,7 +142,7 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     paddingTop: 13,
     borderTopWidth: 1,
-    borderColor: "#eee",
+    borderColor: "#151515",
   },
   Input: {
     flex: 1,
@@ -153,15 +152,15 @@ const styles = StyleSheet.create({
     paddingVertical: 5,
     paddingHorizontal: 10,
     borderWidth: 1,
-    borderColor: "#eee",
+    backgroundColor: "#151515",
   },
   Button: {
     height: 40,
     width: 40,
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: "#1c6cce",
-    borderRadius: 4,
+    backgroundColor: "#1c6e",
+    borderRadius: 100,
     marginLeft: 10,
   },
   FlatList: {
@@ -172,7 +171,7 @@ const styles = StyleSheet.create({
     marginBottom: 15,
     padding: 15,
     borderRadius: 4,
-    backgroundColor: "#eee",
+    backgroundColor: "#151515",
     display: "flex",
     flexDirection: "row",
     justifyContent: "space-between",
@@ -180,7 +179,7 @@ const styles = StyleSheet.create({
   },
   Text: {
     fontSize: 15,
-    color: "#333",
+    color: "#FFF",
     fontWeight: "bold",
     marginTop: 4,
     textAlign: "center",
